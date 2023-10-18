@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="dashboard-left">
+            <img src="{% static 'img/logo.png' %}" alt="Logo">
+            <p>Welcome to JSH online store</p>
+        </div>
+        <div class="dashboard-right">
+            <a href="{% url 'about_us' %}">About Us</a>
+            <a href="{% url 'contact_us' %}">Contact Us</a>
+            <a href="{% url 'login' %}">Log In</a>
+            <a href="{% url 'registration' %}">Sign Up</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="image-container">
+            <div class="image" style="background-image: url('{% static 'img/home.png' %}');">
+                <div class="image-content">
+                    <h1>Get Motorcycle Spare Parts at a wholesale price</h1>
+                    <a class="shop-now-button" href="dashboard">SHOP NOW</a>
+                </div>
+            </div>
+            <div class="image" style="background-image: url('{% static 'img/shell.jpeg' %}');">
+                <div class="image-content">
+                    <h1>Get Shell and other oil at a wholesale price</h1>
+                    <a class="shop-now-button" href="dashboard">SHOP NOW</a>
+                </div>
+            </div>
+            <div class="image" style="background-image: url('{% static 'img/headlights.jpeg' %}');">
+                <div class="image-content">
+                    <h1>Discover our latest collection of high-quality headlights for your vehicles</h1>
+                    <a class="shop-now-button" href="dashboard">SHOP NOW</a>
+                </div>
+            </div>
+            <!-- Add more image containers as needed -->
+        </div>
+    </div>
+</body>
+</html>

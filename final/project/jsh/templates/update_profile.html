@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Profile</title>
+    <link rel="stylesheet" href="{% static 'css/update_profile.css' %}">
+</head>
+<body>
+    <div class="update-profile">
+        <div id="container">
+            <div id="header">
+                <h1><a href="new_time_off">Update Profile</a></h1>
+            </div>
+            <div id="content">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <label for="{{ email_form.email.id_for_label }}">Email:</label>
+                        {{ email_form.email }}
+                    </div>
+                    <div class="form-row">
+                        <label for="{{ profile_form.location.id_for_label }}">Location:</label>
+                        {{ profile_form.location }}
+                    </div>
+                    <div class="form-row">
+                        <label for="{{ profile_form.phone_number.id_for_label }}">Phone Number:</label>
+                        {{ profile_form.phone_number }}
+                    </div>
+                    <div class="submit-row">
+                        <button type="submit">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
